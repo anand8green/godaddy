@@ -1,4 +1,16 @@
+* {
+  --bg-color: #E8EBF3;
+  --text-color: #414856;
+  --main-color: #5E5DF0;
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
 body {
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  height: 100vh;
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
     'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
@@ -10,4 +22,263 @@ body {
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
+}
+
+a,
+link {
+  text-decoration: none;
+  color: #414856;
+}
+
+.header {
+  text-align: center;
+  background-color: var(--main-color);
+  padding: 2rem 0;
+  color: white;
+}
+
+.header img {
+  width: 100%;
+  max-width: 20rem;
+}
+
+.header h1 {
+  margin: 1rem 0;
+  font-size: 2rem;
+}
+
+.loading,
+.error {
+  text-align: center;
+  margin-top: 4rem;
+}
+
+.listItem {
+  margin: 0 auto;
+  background-color: white;
+  border-bottom: 1px solid rgb(234, 234, 234);
+  max-width: 50rem;
+  display: flex;
+  padding: 2rem;
+  align-items: center;
+  justify-content: space-between;
+
+}
+
+.leftSide {
+  width: 100%;
+
+}
+
+.leftSide h2 {
+  word-break: break-all;
+}
+
+.btn {
+  min-width: 9rem;
+  background-color: var(--main-color);
+  border-radius: 999px;
+  box-shadow: #5E5DF0 0 10px 20px -10px;
+  color: #FFFFFF;
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 24px;
+  padding: 8px 18px;
+  width: fit-content;
+  word-break: normal;
+  border: 0;
+  transition: all 0.3s ease;
+  margin-left: 1rem;
+  text-align: center;
+}
+
+.btn:hover {
+  background: #7a7af6;
+}
+
+.repo {
+  color: rgb(176, 176, 176);
+  margin-top: 0.5rem;
+}
+
+/* List Details page */
+
+.container {
+  height: 100vh;
+  padding: 1rem;
+
+}
+
+.details_box {
+  margin: 2rem auto;
+  max-width: 40rem;
+  background-color: white;
+  box-shadow: #5d5df064 0 10px 20px -10px;
+  padding: 30px 45px;
+  border-radius: 2rem;
+}
+
+.topbar {
+  display: flex;
+  justify-content: space-between;
+  color: var(--main-color);
+  width: 100%;
+  /* overflow: hidden; */
+}
+
+.topbar h1 {
+  /* margin-top: 1rem;
+  font-size: 1.6rem; */
+  word-break: break-all;
+}
+
+.closeBtn {
+  background: #5E5DF0;
+  margin: 0;
+  margin-left: 1rem;
+  border: 0;
+  padding: 0;
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.cross {
+  height: 20px;
+}
+
+.closeBtn:hover {
+  background: #7a7af6;
+}
+
+.description {
+  margin: 2rem 0;
+  font-size: 1.2rem;
+  line-height: 2rem;
+  color: rgb(159, 160, 172);
+}
+
+.description span {
+  font-weight: bold;
+  color: var(--main-color)
+}
+
+.tabBox {
+  display: flex;
+  justify-content: space-between;
+  margin: 2rem 0;
+  flex-wrap: wrap;
+  width: 100%;
+}
+
+.tab {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 0.5rem 0.5rem;
+  padding: 1rem;
+  border-radius: 1rem;
+}
+
+.title {
+  font-weight: 300;
+}
+
+.value {
+  font-size: 1.5rem;
+  margin-top: 1rem;
+  text-align: center;
+}
+
+.fork {
+  background-color: #DEECE0;
+}
+
+.lang {
+  background-color: #FEEDD7
+}
+
+.watchers {
+  background-color: #E2EDF9;
+}
+
+.url {
+  background-color: #f1f1f1;
+  padding: 0.6rem 1.3rem;
+  border-radius: 1rem;
+  font-size: 0.8rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  white-space: nowrap;
+
+  overflow: hidden;
+  width: min-content;
+}
+
+.url:hover {
+  background-color: #dedede;
+
+}
+
+@media screen and (max-width: 450px) {
+
+  .topbar {
+    padding: 1rem 0;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column-reverse;
+  }
+
+  .topbar h1 {
+    margin-top: 1rem;
+    font-size: 1.6rem;
+  }
+
+  .listItem {
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+
+  }
+
+  .leftSide {
+    margin: 0 auto;
+    text-align: center;
+  }
+
+  .btn {
+    margin-top: 1rem;
+  }
+
+  .closeBtn {
+    width: 25px;
+    height: 25px;
+  }
+
+  .cross {
+    height: 10px;
+  }
+
+  .url {
+    white-space: normal;
+    width: 100%;
+  }
+
+  .details_box {
+    padding: 1rem;
+  }
+
+  .leftSide {
+    width: 100%;
+  }
 }
